@@ -27,5 +27,6 @@ public class Main {
                         new Point(federer, sid, "server"),
                         new Point(sid, federer, "receiver"))
         );
+        System.out.println(game.winner().name() + " has won!!!");
     }
 }

@@ -15,6 +15,8 @@ public class Game {
             "40", "game"
     );
 
+    //TODO: String manipulation isn't great, is there a better type safe way?
+    // The split we're using is ugly
     private final Map<String, String> deucePoints =
             Map.of(
                     "40-40-server", "adv-40",
@@ -43,7 +45,6 @@ public class Game {
         for (Point point: pointsPlayed) {
             pointPlayed(point);
             if (hasGameEnded()) {
-                System.out.println(winner.name() + " has won!!!");
                 return;
             }
         }
